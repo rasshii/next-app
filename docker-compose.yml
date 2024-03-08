@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    container_name: next-app
+    volumes:
+      - ./src:/usr/src
+    ports:
+      # Next.js との ポートフォワード
+      - 3000:3000
+      # StoryBook との ポートフォワード
+      - 6006:6006
+    command: 
+      - sh -c "yarn run dev"
+      - sh -c "yarn run storybook"
+    networks:
+      - next-app
+    tty: true
+networks:
+  next-app:
+    external: true
