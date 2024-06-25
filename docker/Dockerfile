@@ -2,6 +2,6 @@ FROM node:20-alpine3.18
 
 WORKDIR /usr/src
 
-RUN yarn add create-next-app
+COPY ./src /usr/src
 
-CMD ["yarn", "run", "dev"]
+RUN yarn install
