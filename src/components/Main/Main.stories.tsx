@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import Main from '.'
 import { ThemeProvider } from 'styled-components'
-import { defaultTheme } from '../../theme/default'
+import { defaultTheme } from '@/theme/default'
 
 export default {
   title: 'Main',
