@@ -1,6 +1,6 @@
 init: #初回構築時に実行
 	#docker network create next-app
-	docker compose run app yarn install
+	docker compose run next yarn install
 	@make build
 	@make up
 build:

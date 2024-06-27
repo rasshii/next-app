@@ -5,3 +5,5 @@ WORKDIR /usr/src
 COPY ./src /usr/src
 
 RUN yarn install
+
+EXPOSE 6006
