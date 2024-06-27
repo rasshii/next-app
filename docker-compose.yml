@@ -7,6 +7,7 @@ services:
     container_name: next-app
     volumes:
       - ./src:/usr/src
+      - ./src/node_modules:/usr/src/node_modules
     ports:
       # Next.js との ポートフォワード
       - 3000:3000
@@ -16,6 +17,8 @@ services:
     networks:
       - next-app
     tty: true
+volumes:
+  node_modules:
 networks:
   next-app:
     external: true
