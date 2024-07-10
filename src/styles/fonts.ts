@@ -1,6 +1,6 @@
-import { Open_Sans } from 'next/font/google'
+import { Noto_Sans_JP } from 'next/font/google'
 
-export const open_sans = Open_Sans({
+export const noto_sans_jp = Noto_Sans_JP({
   subsets: ['latin'],
-  display: 'swap'
+  weight: '400'
 })
